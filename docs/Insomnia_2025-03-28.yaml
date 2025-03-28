@@ -1,0 +1,305 @@
+type: collection.insomnia.rest/5.0
+name: estacionamento
+meta:
+  id: wrk_e46a2a5a252740df9baddece3d4502fa
+  created: 1743176365144
+  modified: 1743176365144
+collection:
+  - name: automovel
+    meta:
+      id: fld_1965cc6cf6ca48f4ba904af64da2553a
+      created: 1743177142986
+      modified: 1743177142986
+      sortKey: -1743177142986
+    children:
+      - url: http://localhost:3001/automovel
+        name: read
+        meta:
+          id: req_33c857aa4d0445a9aee54fe62e8d8779
+          created: 1743177162825
+          modified: 1743177320145
+          isPrivate: false
+          sortKey: -1743177166209
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automovel
+        name: readOne
+        meta:
+          id: req_e578558a0ee24e82be3b94950698cfe6
+          created: 1743177226532
+          modified: 1743178478980
+          isPrivate: false
+          sortKey: -1743000802838.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automovel
+        name: create
+        meta:
+          id: req_651c486ab8764d048c444fa02e6de6fe
+          created: 1743177234093
+          modified: 1743177997231
+          isPrivate: false
+          sortKey: -1742912621153.25
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"placa":"EMG-2002",
+            	"proprietario": "Emily Goulart",
+            	"tipo":"Carro",
+            	"modelo":"Hb20",
+            	"marca":"Hyundai",
+            	"cor":"Branco",
+            	"ano": 2020,
+            	"telefone": "19995423687"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automovel/EMG-2002
+        name: update
+        meta:
+          id: req_06ac488a2b544a8582fae21f7e423e4e
+          created: 1743177240879
+          modified: 1743178160706
+          isPrivate: false
+          sortKey: -1742868530310.625
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"placa":"EMG-2002",
+            	"proprietario": "Emily Goulart",
+            	"tipo":"Carro",
+            	"modelo":"Hb20",
+            	"marca":"Hyundai",
+            	"cor":"Prata",
+            	"ano": 2019,
+            	"telefone": "19995423687"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/automovel/SCD-8456
+        name: delete
+        meta:
+          id: req_a363be1343d04fe196959972ec9e2bb9
+          created: 1743177251253
+          modified: 1743178207050
+          isPrivate: false
+          sortKey: -1742846484889.3125
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            		"placa": "SCD-8456",
+            		"proprietario": "Lucas Menegon",
+            		"tipo": "Carro",
+            		"modelo": "Gol",
+            		"marca": "Volkswagen",
+            		"cor": "Prata",
+            		"ano": 2013,
+            		"telefone": "19995423687"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: estadia
+    meta:
+      id: fld_28ca211cd0f44dd7b9187d997af9d704
+      created: 1743177156634
+      modified: 1743177156634
+      sortKey: -1743177156634
+    children:
+      - url: http://localhost:3001/estadia
+        name: read
+        meta:
+          id: req_b7d89acd97c54b249fa1fa40034de453
+          created: 1743177169305
+          modified: 1743177332827
+          isPrivate: false
+          sortKey: -1743177170842
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadia
+        name: readOne
+        meta:
+          id: req_58ecdee9e83d4c7baadc01e7ec6f8912
+          created: 1743177193186
+          modified: 1743177337694
+          isPrivate: false
+          sortKey: -1743177168525.5
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadia
+        name: create
+        meta:
+          id: req_10285eac0e5c465eb312c8a9a9781559
+          created: 1743177202075
+          modified: 1743178796514
+          isPrivate: false
+          sortKey: -1743177167367.25
+        method: POST
+        body:
+          mimeType: application/json
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadia/2
+        name: update
+        meta:
+          id: req_c389b3e412714242867e242fef2a080f
+          created: 1743177209943
+          modified: 1743178877743
+          isPrivate: false
+          sortKey: -1743177166788.125
+        method: PATCH
+        body:
+          mimeType: application/json
+          text: |-
+            {		
+            		"entrada": "2025-03-25T09:00:00.000Z",
+            		"saida": "2025-03-27T13:00:00.000Z",
+            		"valorHora": 15,
+            		"automovelPlaca": "DBV-9386"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:3001/estadia/8
+        name: delete
+        meta:
+          id: req_59090aeaf1124947b7cc86e0ecbbb9f3
+          created: 1743177217763
+          modified: 1743178654561
+          isPrivate: false
+          sortKey: -1743177166498.5625
+        method: DELETE
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "entrada": "2025-03-30T10:00:00.000Z",
+              "saida": "2025-03-30T11:00:00.000Z",
+              "valorHora": 15.0,
+              "automovelPlaca": "ANC-1052"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/11.0.1
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_ab0e8d7e8d6cdaceb5ba9aea2eade1aefdaf6022
+    created: 1743176365153
+    modified: 1743176365153
+environments:
+  name: Base Environment
+  meta:
+    id: env_ab0e8d7e8d6cdaceb5ba9aea2eade1aefdaf6022
+    created: 1743176365150
+    modified: 1743176365150
+    isPrivate: false
